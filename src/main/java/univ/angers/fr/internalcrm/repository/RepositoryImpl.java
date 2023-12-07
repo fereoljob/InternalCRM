@@ -11,7 +11,10 @@ public class RepositoryImpl implements Repository {
 
     public RepositoryImpl() {
         this.leadsList = Instancio.ofList(ModelTO.class).size(30).create();
+        ModelTO mod = new ModelTO("haha", "haa", 1000, "", "", "", "", "", "", "", "alabasta");
+        leadsList.add(mod);    
     }
+
 
     @Override
     public List<ModelTO> findAll() {
