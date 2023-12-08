@@ -11,7 +11,7 @@ public class RepositoryImpl implements Repository {
 
     public RepositoryImpl() {
         this.leadsList = Instancio.ofList(ModelTO.class).size(30).create();
-        ModelTO mod = new ModelTO("haha", "haa", 1000, "", "", "", "", "", "", "", "alabasta");
+        ModelTO mod = new ModelTO("haha", "haa", 1000, "", "2 avenue du général patton", "49100", "Angers", "France", "", "", "alabasta");
         leadsList.add(mod);    
     }
 
