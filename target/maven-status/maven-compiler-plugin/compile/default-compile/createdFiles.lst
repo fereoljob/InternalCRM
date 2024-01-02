@@ -24,7 +24,6 @@ univ/angers/fr/internalcrm/service/InternalCRMService$addLead_args$_Fields.class
 univ/angers/fr/internalcrm/service/InternalCRMService$Iface.class
 univ/angers/fr/internalcrm/service/InternalCRMService$addLead_result$addLead_resultStandardSchemeFactory.class
 univ/angers/fr/internalcrm/service/InternalCRMService$AsyncProcessor$deleteLead.class
-univ/angers/fr/internalcrm/repository/Repository.class
 univ/angers/fr/internalcrm/service/InternalCRMService$AsyncProcessor$deleteLead$1.class
 univ/angers/fr/internalcrm/service/InternalCRMService$AsyncClient$deleteLead_call.class
 univ/angers/fr/internalcrm/service/InternalCRMService$addLead_args$addLead_argsTupleScheme.class
@@ -82,7 +81,6 @@ univ/angers/fr/internalcrm/service/InternalLeadDto$InternalLeadDtoTupleScheme.cl
 univ/angers/fr/internalcrm/service/InternalCRMService$findLeads_args$_Fields.class
 univ/angers/fr/internalcrm/domain/ModelTO.class
 univ/angers/fr/internalcrm/service/Mapper.class
-univ/angers/fr/internalcrm/repository/RepositoryImpl.class
 univ/angers/fr/internalcrm/service/InternalLeadDto$InternalLeadDtoStandardSchemeFactory.class
 univ/angers/fr/internalcrm/service/InternalCRMService$findLeads_result$findLeads_resultStandardScheme.class
 univ/angers/fr/internalcrm/service/InternalCRMService$findLeadsByDate_result$_Fields.class

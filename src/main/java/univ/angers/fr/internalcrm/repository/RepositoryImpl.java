@@ -1,8 +1,10 @@
 package univ.angers.fr.internalcrm.repository;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.instancio.Instancio;
+import org.instancio.Select;
 
 import univ.angers.fr.internalcrm.domain.ModelTO;
 
@@ -10,9 +12,9 @@ public class RepositoryImpl implements Repository {
     private List<ModelTO> leadsList;
 
     public RepositoryImpl() {
-        this.leadsList = Instancio.ofList(ModelTO.class).size(30).create();
-        ModelTO mod = new ModelTO("haha", "haa", 1000, "", "2 avenue du général patton", "49100", "Angers", "France", "", "", "alabasta");
-        leadsList.add(mod);    
+        this.leadsList = Instancio.ofList(ModelTO.class).size(30).set(Select.field(ModelTO::getStreet), "2 avenue du général patton").create();
+        ModelTO mod = new ModelTO("haha", "haa", 1000, "", "2 avenue du général patton", "49100", "Angers", "France", LocalDateTime.now(), "", "alabasta");
+        leadsList.add(mod);
     }
 
 

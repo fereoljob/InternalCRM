@@ -1,5 +1,7 @@
 package univ.angers.fr.internalcrm.domain;
 
+import java.time.LocalDateTime;
+
 public class ModelTO {
     private String firstName;
     private String lastName;
@@ -9,11 +11,11 @@ public class ModelTO {
     private String postalCode;
     private String city;
     private String country;
-    private String creationDate;
+    private LocalDateTime creationDate;
     private String company;
     private String state;
     public ModelTO(String firstName,String lastName,double annualRevenue,String phone,String street,String postalCode,
-    String city,String country,String creationDate,String company,String state){
+    String city,String country,LocalDateTime creationDate,String company,String state){
         this.firstName = firstName;
         this.lastName = lastName;
         this.annualRevenue = annualRevenue;
@@ -50,7 +52,7 @@ public class ModelTO {
     public String getCountry(){
         return this.country;
     }
-    public String getCreationDate(){
+    public LocalDateTime getCreationDate(){
         return this.creationDate;
     }
     public String getCompany(){

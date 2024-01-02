@@ -1,5 +1,6 @@
 package univ.angers.fr.internalcrm.service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.apache.thrift.TException;
@@ -25,13 +26,14 @@ public class InternalCRMServiceImpl  implements InternalCRMService.Iface{
 
     @Override
     public List<InternalLeadDto> findLeadsByDate(String startDate, String endDate) throws TException {
-        /*List<InternalLeadDto> listLead = repository.findAll().stream()
-        .filter(element -> element.getCreationDate() >= startDate &&
-        element.getCreationDate() <= endDate && element.getState().equals(state))
+        LocalDateTime start = LocalDateTime.parse(startDate);
+        LocalDateTime end = LocalDateTime.parse(endDate);
+        List<InternalLeadDto> listLead = repository.findAll().stream()
+        .filter(element -> element.getCreationDate().compareTo(start)>=0 &&
+        element.getCreationDate().compareTo(end)<=0)
         .map(element -> Mapper.fromModelTOTOInternalLeadDto(element))
         .toList();
-        return listLead;*/
-        return null; 
+        return listLead;
     }
 
     @Override
