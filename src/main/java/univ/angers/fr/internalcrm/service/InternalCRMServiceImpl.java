@@ -26,8 +26,8 @@ public class InternalCRMServiceImpl  implements InternalCRMService.Iface{
 
     @Override
     public List<InternalLeadDto> findLeadsByDate(String startDate, String endDate) throws TException {
-        LocalDateTime start = LocalDateTime.parse(startDate);
-        LocalDateTime end = LocalDateTime.parse(endDate);
+        LocalDateTime start = LocalDateTime.parse(startDate+"T00:00:00");
+        LocalDateTime end = LocalDateTime.parse(endDate+"T23:59:59");
         List<InternalLeadDto> listLead = repository.findAll().stream()
         .filter(element -> element.getCreationDate().compareTo(start)>=0 &&
         element.getCreationDate().compareTo(end)<=0)
